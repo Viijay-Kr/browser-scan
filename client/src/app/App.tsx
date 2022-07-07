@@ -4,19 +4,20 @@ import {
   extendTheme,
   Heading,
   type ThemeConfig,
+  Flex,
 } from "@chakra-ui/react";
-import { FeedInput } from "./FeedInput";
+
+import { Scanner } from "./Scanner";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import { ToggleTheme } from "./ToggleTheme";
 
 const client = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: Infinity,
     },
-    mutations: {
-      
-    }
+    mutations: {},
   },
 });
 const config: ThemeConfig = {
@@ -29,10 +30,13 @@ function App() {
   return (
     <QueryClientProvider client={client}>
       <ChakraProvider theme={theme}>
-        <Heading size={"lg"} textAlign="center" padding={4}>
-          Can I use CSS
-        </Heading>
-        <FeedInput />
+        <Flex alignItems={"center"} direction={"row"} gap={4} padding={4}>
+          <Heading size={"lg"} textAlign="center">
+            Can I use CSS
+          </Heading>
+          <ToggleTheme />
+        </Flex>
+        <Scanner />
       </ChakraProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

@@ -1,8 +1,8 @@
 import restify, { RequestHandler } from "restify";
 import corsMiddleware from "restify-cors-middleware";
-import { browsersList } from "./browsers";
+import { browsersList, browserVersions } from "./browsers";
 import { save_in_cache } from "./in_memory";
-import { start_scanning } from "./scanner";
+import { file_scanner, stream_scanner_async } from "./scanner";
 const server = restify.createServer();
 
 const cors = corsMiddleware({
@@ -20,15 +20,6 @@ server.use(
   })
 );
 
-server.post(
-  {
-    name: "scan",
-    contentType: "application/json",
-    url: "/scan",
-  },
-  [save_in_cache, start_scanning]
-);
-
 server.get(
   {
     name: "browsers",
@@ -36,6 +27,33 @@ server.get(
     url: "/browsers",
   },
   [browsersList]
+);
+
+server.get(
+  {
+    name: "browser_versions",
+    contentType: "application/json",
+    url: "/versions/:browser",
+  },
+  [browserVersions]
+);
+
+server.post(
+  {
+    name: "stream_scan",
+    url: "/scan/stream",
+    contentType: "application/json",
+  },
+  [save_in_cache, stream_scanner_async]
+);
+
+server.post(
+  {
+    name: "file_scanner",
+    url: "/scan/file",
+    contentType: "appliccation/json",
+  },
+  [save_in_cache, file_scanner]
 );
 
 server.listen(8080, function () {

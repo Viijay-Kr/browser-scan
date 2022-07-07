@@ -10,6 +10,7 @@ declare module "doiuse" {
 
 declare module "doiuse/lib/browsers" {
   export default class BrowserSelection {
+    constructor(query: string): void;
     list(): Array<string>;
   }
 }

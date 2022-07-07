@@ -8,7 +8,11 @@
     "server": "ts-node server.ts"
   },
   "dependencies": {
+    "@types/postcss-less": "^4.0.2",
     "doiuse": "^4.4.1",
+    "postcss-less": "^6.0.0",
+    "postcss-scss": "^4.0.4",
+    "postcss-strip-inline-comments": "^0.1.5",
     "restify": "^8.6.1",
     "restify-cors-middleware": "^1.1.1",
     "ts-node": "^10.8.2",

@@ -19,7 +19,7 @@ The server package contains a a simple resitify node server serving the followin
 
     - Gives key/value pairs of supported browsers
 
-      ```json
+      ```
       #  Supported Browsers
       {
          and_chr: "Android Chrome",
@@ -42,7 +42,7 @@ The server package contains a a simple resitify node server serving the followin
 
     - Gives a list of supported versions of the browser in latest to oldest order
 
-      ```json
+      ```
         # Request
         GET /chrome/versions
 
@@ -54,7 +54,7 @@ The server package contains a a simple resitify node server serving the followin
 
     - Scans a give single file and gives the result per file in the following format
 
-      ```ts
+      ```typescript
       type Line = string;
       type Column = string;
       type NonCompatibleProperty = string;
@@ -64,7 +64,7 @@ The server package contains a a simple resitify node server serving the followin
       }
       ```
 
-      ```json
+      ```
       # Content-Type: application/json
       # Request Body
          {

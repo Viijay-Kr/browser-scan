@@ -2,28 +2,95 @@
 
 ### Problem Statement
 
-Modern browsers comes with the good support of modern CSS3 properties and we as front end developers tend to use them naively. However application these targets variety of users across demographics and devices . These group of users uses legacy to modern browsers where some of the features will tend to break the user experience
+Check your css for support against a browser of your choice. The non compatibility table gives the results per line per file.
 
-### Solution
+### Steps to run
 
-Checking every CSS property we right is pretty painful and time consuming process. ‘Can I use' database helps developers to check their code against compatibility. Even more smarter solutions/tools does this automatically. This is where 'doiuse’ shines well. This tool lints your css code for browser support against can I use database.
+1. Checkout the repository
+   - `yarn` or `npm install`
+2. Run `yarn dev` to start the dev server
+   - This run the server and client concurrently
 
-### Project Description
+### Server
 
-Do I use is a great start , but its like any other command line tool. This project will use the tool in an application which could take a browser(predefined) as input ,scans the scss/css modules in the project and builds a output
+The server package contains a a simple resitify node server serving the following apis
 
-#### Input
+1.  `GET: /browsers`
 
-A simple select field that takes a browser as input
+    - Gives key/value pairs of supported browsers
 
-#### API
+      ```json
+      #  Supported Browsers
+      {
+         and_chr: "Android Chrome",
+         and_ff: "Android Firefox",
+         and_uc: "Android UC",
+         ios_saf: "iOS Safari",
+         op_mob: "Opera Mobile",
+         android: "Android",
+         chrome: "Chrome",
+         firefox: "Firefox",
+         op_mini: "Opera Mini",
+         opera: "Opera",
+         safari: "Safari",
+         edge: "Edge",
+         samsung: "Samsung",
+      }
+      ```
 
-A rest api that takes the input , scans the project and spits the output as json
+2.  `GET: /:browser/versions`
 
-#### Output
+    - Gives a list of supported versions of the browser in latest to oldest order
 
-The output from the api shall be represented in the tabular format with the following attributes
+      ```json
+        # Request
+        GET /chrome/versions
 
-- Browser Version
-- Vulnerable Properties
-- Path to the file
+        # Response
+         ["104","103","102".....,"4"]
+      ```
+
+3.  `POST: /scan/file`
+
+    - Scans a give single file and gives the result per file in the following format
+
+      ```ts
+      type Line = string;
+      type Column = string;
+      type NonCompatibleProperty = string;
+      type CompatibilityTuple = [`${Line}:${Column}`, NonCompatibleProperty];
+      interface ScannerResponse {
+        [file]: [Line, NonCompatibleProperty[]];
+      }
+      ```
+
+      ```json
+      # Content-Type: application/json
+      # Request Body
+         {
+            "project_path":"<path_to_file>.less|css|scss",
+            "browser":"chrome",
+            "version":"102",
+         }
+
+      # Response
+         {
+            [full_file_path.css]:[
+               ["12:3","object-fit is only partically,multi-column is not supported in chrome"],
+               ["111:2","position is not supported"],
+               ]
+         }
+      ```
+
+4.  `POST: /scan/stream`
+    - This is an asynchrous streaming API useful for scanning more than single style file in a project
+    - It uses transfer encoding chunked header to stream chunks of messages to the client
+    - Chunking is usually per file basis. However the whole scanning process is asynchronous
+    - `Request` and `Response` strucure is same as in non streaming service `/scan/file`
+
+#### Client
+
+The client package is a single page React application. The client uses the following lib/tools
+
+1. **Chakra UI** for the UI
+2. **React Query** for API access

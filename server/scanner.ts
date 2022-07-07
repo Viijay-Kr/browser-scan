@@ -1,7 +1,6 @@
 import getCache from "./in_memory";
-import { RequestHandler, type Response } from "restify";
+import { RequestHandler } from "restify";
 import postcss, { ProcessOptions } from "postcss";
-import postcssScss from "postcss-scss";
 import doiuse from "doiuse";
 import { resolve as path_resolve, join, resolve } from "path";
 
@@ -16,16 +15,8 @@ import syntax from "postcss-less";
 
 type Line = string;
 type Column = string;
-type Feature = string;
-type CompatibilityTuple = [`${Line}:${Column}`, Feature];
-interface ScannerResponse {
-  browser: string;
-  version: string;
-  scanned_result: Array<{
-    file: string;
-    compatability_tuple: CompatibilityTuple[];
-  }>;
-}
+type NonCompatibleProperty = string;
+type CompatibilityTuple = [`${Line}:${Column}`, NonCompatibleProperty];
 
 interface ScannerResponseAsync {
   scanned_result: Record<string, CompatibilityTuple[]>;

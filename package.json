@@ -1,0 +1,22 @@
+{
+  "name": "can-i-use-css",
+  "version": "1.0.0",
+  "description": "Can I use css is a open source tool for scanning your css for compatibility  against the desired version of browser",
+  "main": "index.js",
+  "repository": "git@gitlab.quantilope.codes:vijay.krishna/can-i-use-css.git",
+  "author": "vijay.krishna <vijay.krishna@quantilope.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn serve\" \"yarn client\"",
+    "serve": "cd server && yarn server",
+    "client": "cd client && yarn start"
+  },
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  }
+}

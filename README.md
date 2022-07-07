@@ -10,6 +10,7 @@ Check your css for support against a browser of your choice. The non compatibili
    - `yarn` or `npm install`
 2. Run `yarn dev` to start the dev server
    - This run the server and client concurrently
+   - Sever runs at `http://[::]:8080` and client runs at `http://[::]:3000`
 
 ### Server
 

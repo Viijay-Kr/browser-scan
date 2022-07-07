@@ -1,7 +1,6 @@
 import getCache from "./in_memory";
-import { RequestHandler, type Response } from "restify";
+import { RequestHandler } from "restify";
 import postcss, { ProcessOptions } from "postcss";
-import postcssScss from "postcss-scss";
 import doiuse from "doiuse";
 import { resolve as path_resolve, join, resolve } from "path";
 

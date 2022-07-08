@@ -1,8 +1,6 @@
 ## Can I use CSS
 
-### Problem Statement
-
-Check your css for support against a browser of your choice. The non compatibility table gives the results per line per file.
+Check your css for support against a browser of your choice. The non compatibility table gives the results on a file basis
 
 ### Steps to run
 

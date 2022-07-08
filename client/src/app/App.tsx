@@ -5,6 +5,8 @@ import {
   Heading,
   type ThemeConfig,
   Flex,
+  Text,
+  Stack,
 } from "@chakra-ui/react";
 
 import { Scanner } from "./Scanner";
@@ -32,10 +34,15 @@ function App() {
       <ChakraProvider theme={theme}>
         <Flex alignItems={"center"} direction={"row"} gap={4} padding={4}>
           <Heading size={"lg"} textAlign="center">
-            Can I use CSS
+            Can I use CSS.
           </Heading>
           <ToggleTheme />
         </Flex>
+        <Stack px={4} mb={3}>
+          <Text fontSize={"sm"}>
+            Check your CSS for compatibility against browsers
+          </Text>
+        </Stack>
         <Scanner />
       </ChakraProvider>
       <ReactQueryDevtools initialIsOpen={false} />

@@ -1,8 +1,6 @@
 ## Can I use CSS
 
-### Problem Statement
-
-Check your css for support against a browser of your choice. The non compatibility table gives the results per line per file.
+Check your css for support against a browser of your choice. The non compatibility table gives the results on a file basis
 
 ### Steps to run
 
@@ -10,6 +8,7 @@ Check your css for support against a browser of your choice. The non compatibili
    - `yarn` or `npm install`
 2. Run `yarn dev` to start the dev server
    - This run the server and client concurrently
+   - Sever runs at `http://[::]:8080` and client runs at `http://[::]:3000`
 
 ### Server
 
@@ -19,7 +18,7 @@ The server package contains a a simple resitify node server serving the followin
 
     - Gives key/value pairs of supported browsers
 
-      ```json
+      ```
       #  Supported Browsers
       {
          and_chr: "Android Chrome",
@@ -42,7 +41,7 @@ The server package contains a a simple resitify node server serving the followin
 
     - Gives a list of supported versions of the browser in latest to oldest order
 
-      ```json
+      ```
         # Request
         GET /chrome/versions
 
@@ -54,7 +53,7 @@ The server package contains a a simple resitify node server serving the followin
 
     - Scans a give single file and gives the result per file in the following format
 
-      ```ts
+      ```typescript
       type Line = string;
       type Column = string;
       type NonCompatibleProperty = string;
@@ -64,7 +63,7 @@ The server package contains a a simple resitify node server serving the followin
       }
       ```
 
-      ```json
+      ```
       # Content-Type: application/json
       # Request Body
          {

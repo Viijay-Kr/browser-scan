@@ -194,22 +194,23 @@ const CompatibilityTable = ({
     }
     return file.replace(project_path ?? "", "");
   };
+  const TableHead = (
+    <Tr>
+      <Th>File</Th>
+      <Th>Non Compatible Properties</Th>
+    </Tr>
+  );
   return (
     <TableContainer overflowX="scroll" whiteSpace={"pre-wrap"}>
-      <Table variant={"striped"}>
-        <TableCaption>
+      <Table size={"md"} variant={"striped"} colorScheme="teal">
+        <TableCaption placement="top">
           CSS Features not supported in {browser} v{version}
         </TableCaption>
-        <Thead>
-          <Tr>
-            <Th>File</Th>
-            <Th>Non Compatible Properties</Th>
-          </Tr>
-        </Thead>
+        <Thead>{TableHead}</Thead>
         <Tbody>
           {scanned_result.map(([file, compatability_tuple], index) => (
             <Tr key={file}>
-              <Td valign="top" maxW={"40vw"}>
+              <Td valign="top" maxW={"35vw"}>
                 {getRelativeFilePath(file)}
               </Td>
               <Td>
@@ -225,12 +226,7 @@ const CompatibilityTable = ({
             </Tr>
           ))}
         </Tbody>
-        <Tfoot>
-          <Tr>
-            <Th>File</Th>
-            <Th>Non Compatible Properties</Th>
-          </Tr>
-        </Tfoot>
+        <Tfoot>{TableHead}</Tfoot>
       </Table>
     </TableContainer>
   );

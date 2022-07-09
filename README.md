@@ -93,3 +93,5 @@ The client package is a single page React application. The client uses the follo
 
 1. **Chakra UI** for the UI
 2. **React Query** for API access
+
+**_This tool only supports CSS,SCSS and LESS modules at the moment. Future releases might inculude support for more CSS tools_**

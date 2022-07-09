@@ -1,0 +1,16 @@
+{
+  "name": "browser-lint",
+  "version": "1.0.0",
+  "description": "Browser lint lets you lint your CSS and Javascript code against specific browser versions",
+  "repository": "https://github.com/Viijay-Kr/browser-lint.git",
+  "author": "Vijaya Krishna",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "private": "true",
+  "devDependencies": {
+    "turbo": "^1.3.1"
+  }
+}

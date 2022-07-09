@@ -30,6 +30,8 @@ Browser lint can be used in three different ways
 - `npm install @browser-lint/cli -g`
   or `yarn global add @browser-lint/cli`
 
+3. **_Sample input and output TBD_**
+
 ### Browser Lint API
 
 1. A Collection of Rest API's that can be integrated into your APPS

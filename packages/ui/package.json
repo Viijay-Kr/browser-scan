@@ -1,6 +1,6 @@
 {
   "name": "@browser-scan/ui",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Browser scan UI packages consists of the UI components and their data dependencies for consuming in apps",
   "main": "dist/index.js",
   "repository": {
@@ -15,11 +15,12 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "webpack --config=webpack.config.js && tsc --project tsconfig.json",
+    "build": "tsc --project tsconfig.json && webpack --config=webpack.config.js --watch",
     "release": "npm run build && npm publish --access public"
   },
   "dependencies": {
     "@browser-scan/schema": "^1.7.0",
+    "@chakra-ui/react": "^2.2.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "framer-motion": "^6",

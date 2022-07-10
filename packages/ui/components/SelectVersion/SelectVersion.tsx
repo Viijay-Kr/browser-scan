@@ -1,5 +1,5 @@
-import React, { ChangeEventHandler } from 'react';
-
+import React, { ChangeEventHandler } from "react";
+import { Select } from "@chakra-ui/select";
 export interface SelectVersionProps {
   onChange?: (version: string) => void;
   placeholder?: string;
@@ -7,12 +7,14 @@ export interface SelectVersionProps {
 }
 
 export const SelectVersion: React.FC<SelectVersionProps> = (props) => {
-  const {options,placeholder,onChange } = props;
+  const { options, placeholder, onChange } = props;
   const onSelection: ChangeEventHandler<HTMLSelectElement> = (evt) => {
     onChange?.(evt.target.value);
   };
   return (
-    <select
+    <Select
+      variant={"flushed"}
+      size="md"
       placeholder={placeholder}
       onChange={onSelection}
     >
@@ -21,7 +23,6 @@ export const SelectVersion: React.FC<SelectVersionProps> = (props) => {
           {o}
         </option>
       ))}
-    </select>
-  )
-  
-}
+    </Select>
+  );
+};

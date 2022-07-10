@@ -11,4 +11,6 @@ export {
 export {
   SelectVersion,
   SelectVersionProps,
-} from './components/SelectVersion/SelectVersion'
+} from "./components/SelectVersion/SelectVersion";
+
+// export { ToggleTheme } from "./components/ToggleTheme/ToggleTheme";

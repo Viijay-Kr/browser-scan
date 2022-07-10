@@ -1,38 +1,38 @@
-# Browser Lint
+# Browser scan
 
-Browser lint lets you lint your CSS and Javascript against a browser of your choice. The feature compatibility is obtained from Can I use databse
+Browser scan lets you scan your CSS and Javascript against a browser of your choice. The feature compatibility is obtained from Can I use databse
 
 # Table of Contents
 
 - [Apps](#apps)
-  - [Browser Lint web](#browser-lint-web)
-  - [Browser Lint CLI](#browser-lint-cli)
-  - [Browser Lint API](#browser-lint-api)
+  - [Browser scan web](#browser-scan-web)
+  - [Browser scan CLI](#browser-scan-cli)
+  - [Browser scan API](#browser-scan-api)
     - [Scanner Stream](#scanner-stream)
     - [Scanner File](#scanner-file)
     - GraphQL APIS-TBD
 
 ## Apps
 
-Browser lint can be used in three different ways
+Browser scan can be used in three different ways
 
-### Browser Lint Web
+### Browser scan Web
 
-1. Browser lint web is a web application powered by React and Node
-2. It lets you lint your project/file against a sepcific version of a browser and produces results per file on line basis
-3. Currently browser lint web supports only style sheets
+1. Browser scan web is a web application powered by React and Node
+2. It lets you scan your project/file against a sepcific version of a browser and produces results per file on line basis
+3. Currently browser scan web supports only style sheets
 
-### Browser Lint CLI
+### Browser scan CLI
 
-1. browser-lint-cli can scan your project/file in cli environment
+1. browser-scan-cli can scan your project/file in cli environment
 2. install it using the command
 
-- `npm install @browser-lint/cli -g`
-  or `yarn global add @browser-lint/cli`
+- `npm install @browser-scan/cli -g`
+  or `yarn global add @browser-scan/cli`
 
 3. **_Sample input and output TBD_**
 
-### Browser Lint API
+### Browser scan API
 
 1. A Collection of Rest API's that can be integrated into your APPS
 2. The Following APIs are supported

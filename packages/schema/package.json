@@ -1,0 +1,31 @@
+{
+  "name": "@browser-scan/schema",
+  "version": "1.7.0",
+  "description": "Browser scan schema package contains the common type definitions across browser scan apps and packages",
+  "main": "dist/@types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viijay-Kr/browser-scan.git#packages/schema"
+  },
+  "author": "Vijaya Krishna",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist/**/*.d.ts"
+  ],
+  "types": "dist/@types/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "release": "npm run build && npm publish --access public"
+  },
+  "dependencies": {
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/Viijay-Kr/browser-scan/issues"
+  },
+  "homepage": "https://github.com/Viijay-Kr/browser-scan#readme"
+}

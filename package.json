@@ -1,15 +1,40 @@
 {
-  "name": "browser-lint",
+  "name": "@browser-scan/repo",
   "version": "1.0.0",
-  "description": "Browser lint lets you lint your CSS and Javascript code against specific browser versions",
-  "repository": "https://github.com/Viijay-Kr/browser-lint.git",
+  "description": "Browser scan lets you scan your CSS and Javascript code against specific browser versions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viijay-Kr/browser-scan.git"
+  },
+  "keywords": [
+    "Browser",
+    "lint",
+    "can",
+    "I",
+    "use",
+    "css",
+    "can",
+    "i",
+    "use",
+    "caniuse.com"
+  ],
   "author": "Vijaya Krishna",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Viijay-Kr/browser-scan/issues"
+  },
+  "homepage": "https://github.com/Viijay-Kr/browser-scan#readme",
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "scan": "turbo run scan",
+    "dev": "turbo run dev",
+    "release": "turbo run release"
+  },
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
-  "private": "true",
   "devDependencies": {
     "turbo": "^1.3.1"
   }

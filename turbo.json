@@ -8,6 +8,9 @@
     },
     "release": {
       "dependsOn": ["^build"]
+    },
+    "dev": {
+      "dependsOn": []
     }
   }
 }

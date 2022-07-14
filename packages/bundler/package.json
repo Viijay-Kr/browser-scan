@@ -1,0 +1,29 @@
+{
+  "name": "@browser-scan/bundler",
+  "version": "1.0.0",
+  "description": "Bundler pacakge consists of webpack related utilities that can be shared across packages",
+  "main": "index.js",
+  "scripts": {
+    "release": "echo 'can release this package'",
+    "test": "echo 'NO TESTS IN BUNDLER PACKAGE'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viijay-Kr/browser-scan.git"
+  },
+  "keywords": [
+    "Bundler",
+    "Browser-Scan-Bundler"
+  ],
+  "devDependencies": {
+    "ts-loader": "^9.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "author": "Vijaya Krishna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Viijay-Kr/browser-scan/issues"
+  },
+  "homepage": "https://github.com/Viijay-Kr/browser-scan#readme"
+}

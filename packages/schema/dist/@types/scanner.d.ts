@@ -3,7 +3,7 @@ export declare type ProjectPath = string;
 declare type Line = string;
 declare type Column = string;
 declare type NonCompatibleProperty = string;
-declare type NonCompatibleTuple = [`${Line}:${Column}`, NonCompatibleProperty];
+export declare type NonCompatibleTuple = [`${Line}:${Column}`, NonCompatibleProperty];
 export interface StreamScannerRequest {
     browser: Browsers;
     version: string;
@@ -12,7 +12,7 @@ export interface StreamScannerRequest {
 export interface NonStreamScannerRequest {
     browser: Browsers;
     version: string;
-    file: File;
+    file: string;
 }
 export interface ScannerResponse {
     scanned_result: {

@@ -8,6 +8,7 @@ import {
   type ThemeConfig,
   extendTheme,
 } from "@chakra-ui/react";
+import { ScannerProvider } from "@browser-scan/scanner";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -20,7 +21,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <App />
+      <ScannerProvider devTools>
+        <App />
+      </ScannerProvider>
     </ChakraProvider>
   </React.StrictMode>
 );

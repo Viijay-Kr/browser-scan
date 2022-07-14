@@ -9,6 +9,7 @@
     "release": {
       "dependsOn": ["^build"]
     },
+    "test": {},
     "dev": {
       "dependsOn": []
     }

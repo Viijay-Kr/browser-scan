@@ -1,0 +1,1 @@
+{"version":3,"file":"fileScanner.d.ts","sourceRoot":"","sources":["../../api/fileScanner.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,uBAAuB,EAAE,eAAe,EAAE,MAAM,sBAAsB,CAAC;AAOhF,eAAO,MAAM,QAAQ;YAKX,uBAAuB;mBAChB,eAAe,KAAK,IAAI;iBAC1B,GAAG,KAAK,IAAI;mBAwC1B,CAAC"}

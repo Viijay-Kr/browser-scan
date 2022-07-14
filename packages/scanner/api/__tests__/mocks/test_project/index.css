@@ -1,0 +1,5 @@
+.app {
+  user-select: none;
+  box-sizing: border-box;
+  inset-inline-end: 2rem;
+}

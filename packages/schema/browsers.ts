@@ -19,5 +19,5 @@ export interface BrowsersResponse {
 }
 
 export interface VersionsResponse {
-  supported_versions: string;
+  supported_versions: string[];
 }

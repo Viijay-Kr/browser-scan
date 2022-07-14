@@ -13,4 +13,4 @@ export {
   SelectVersionProps,
 } from "./components/SelectVersion/SelectVersion";
 
-// export { ToggleTheme } from "./components/ToggleTheme/ToggleTheme";
+export { Scanner, ScannerProps } from "./components/Scanner/Scanner";

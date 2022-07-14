@@ -1,0 +1,34 @@
+import restify from "restify";
+import corsMiddleware from "restify-cors-middleware";
+import getRouter from "./routes";
+
+const server = restify.createServer({
+  router: getRouter(),
+});
+
+const cors = corsMiddleware({
+  origins: ["http://localhost:3000"],
+  allowHeaders: ["*"],
+  exposeHeaders: ["*"],
+});
+
+server.pre(cors.preflight);
+server.use(cors.actual);
+server.use(
+  restify.plugins.bodyParser({
+    mapFiles: true,
+    mapParams: true,
+  })
+);
+
+const start = () => {
+  try {
+    server.listen(8081, () => {
+      console.log("%s listening at %s", server.name, server.url);
+    });
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+start();

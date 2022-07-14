@@ -3,4 +3,5 @@ export {
   ScannerResponse,
   StreamScannerRequest,
   NonStreamScannerRequest,
+  NonCompatibleTuple,
 } from "./scanner";

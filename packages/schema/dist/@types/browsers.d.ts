@@ -17,5 +17,5 @@ export interface BrowsersResponse {
     supported_browsers: Record<Browsers, keyof typeof Browsers>;
 }
 export interface VersionsResponse {
-    supported_versions: string;
+    supported_versions: string[];
 }

@@ -1,6 +1,6 @@
 {
   "name": "@browser-scan/ui",
-  "version": "2.7.3",
+  "version": "2.7.4",
   "description": "Browser scan UI packages consists of the UI components and their data dependencies for consuming in apps",
   "main": "dist/index.js",
   "repository": {
@@ -21,8 +21,8 @@
     "test": "echo 'NO TESTS IN UI PACKAGE YET'"
   },
   "dependencies": {
-    "@browser-scan/schema": "^1.7.0",
-    "@browser-scan/scanner": "^1.6.0",
+    "@browser-scan/schema": "^1.8.0",
+    "@browser-scan/scanner": "^1.6.2",
     "@chakra-ui/react": "^2.2.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",

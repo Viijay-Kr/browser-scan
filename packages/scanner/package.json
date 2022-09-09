@@ -1,6 +1,6 @@
 {
   "name": "@browser-scan/scanner",
-  "version": "1.6.1",
+  "version": "1.6.3",
   "description": "Browser scan scanner is a package containing the APIs required for processing the css and js against the browsers",
   "main": "dist/index.js",
   "repository": {
@@ -23,7 +23,7 @@
     "release": "npm run build && npm publish --access public"
   },
   "dependencies": {
-    "@browser-scan/schema": "1.7.0",
+    "@browser-scan/schema": "1.8.0",
     "doiuse": "^4.4.1",
     "postcss": "^8.4.14",
     "postcss-less": "^6.0.0",

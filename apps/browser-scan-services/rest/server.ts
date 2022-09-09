@@ -21,7 +21,7 @@ server.use(
   })
 );
 
-const start = () => {
+export const startServer = () => {
   try {
     server.listen(8081, () => {
       console.log("%s listening at %s", server.name, server.url);
@@ -30,5 +30,21 @@ const start = () => {
     console.error(e);
   }
 };
+export const serveStatic = (basePath: string, assetsPath: string) => {
+  try {
+    server.get("/", restify.plugins.serveStatic({
+      directory: basePath,
+      default: "index.html",
+    }))
+    server.get("/static/*", restify.plugins.serveStaticFiles(assetsPath, {
+      maxAge: 360000,
+    }))
+  } catch (e) {
+    throw new Error('Path not accessible')
+  }
+}
+export { server }
 
-start();
+if (process.env.RUN_SEVER) {
+  startServer();
+}

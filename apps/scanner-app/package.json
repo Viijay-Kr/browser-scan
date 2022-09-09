@@ -1,0 +1,40 @@
+{
+  "name": "@browser-scan/scanner-app",
+  "version": "1.0.9",
+  "description": "Scanner app is end to end application that runs browser scan in your local system",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --project tsconfig.json && cp -r ../browser-scan-web/build dist/",
+    "serve": "npm run build && node dist/index.js",
+    "release": "npm run build && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viijay-Kr/browser-scan.git"
+  },
+  "keywords": [
+    "Scanner",
+    "CSS",
+    "scanner"
+  ],
+  "dependencies": {
+    "@browser-scan/browser-scan-services": "^1.0.7"
+  },
+  "peerDependencies": {
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "react-query": "^3.39.2"
+  },
+  "author": "Viijay-kr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Viijay-Kr/browser-scan/issues"
+  },
+  "homepage": "https://github.com/Viijay-Kr/browser-scan#readme"
+}

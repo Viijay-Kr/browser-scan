@@ -17,4 +17,4 @@ Use it to run as a stand alone server for scanning CSS content in you local proj
 
 ## How does it look
 
-<img src="./mock-up.gif" height="800" width="800" />
+<img src="./mock-up.gif" />

@@ -40,10 +40,7 @@ const serveStatic = (basePath, assetsPath) => {
             default: "index.html",
         }));
         server.get("/static/*", restify_1.default.plugins.serveStaticFiles(assetsPath, {
-            maxAge: 3600,
-            setHeaders(res) {
-                res.setHeader("Content-Encoding", "gzip, deflate");
-            },
+            maxAge: 360000,
         }));
     }
     catch (e) {
@@ -51,3 +48,6 @@ const serveStatic = (basePath, assetsPath) => {
     }
 };
 exports.serveStatic = serveStatic;
+if (process.env.RUN_SEVER) {
+    (0, exports.startServer)();
+}

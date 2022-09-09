@@ -54,7 +54,8 @@ const streamScanner = async (req, res, next) => {
                 console.warn(error);
             },
             stream(chunk) {
-                const chunks = JSON.stringify(chunk);
+                const filtered = Object.keys(chunk.scanned_result).reduce((acc, file) => chunk.scanned_result[file].length ? Object.assign(Object.assign({}, acc), { [file]: chunk.scanned_result[file] }) : acc, {});
+                const chunks = JSON.stringify(filtered);
                 const chunkSize = chunks.length;
                 res.write(`
         ${chunkSize}\r\n

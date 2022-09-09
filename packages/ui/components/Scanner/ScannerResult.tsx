@@ -53,6 +53,7 @@ export const ScannerResult: React.FC<ScannerResultProps> = ({
         <Tbody>
           {Object.entries(scanned_result)
             .reverse()
+            .filter((res) => !!res.length)
             .map(([file, compatability_tuple]) => (
               <Tr key={file}>
                 <Td valign="top" maxW={"35vw"}>

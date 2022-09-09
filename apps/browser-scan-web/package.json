@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@browser-scan/scanner": "^1.6.1",
-    "@browser-scan/ui": "^2.7.3",
+    "@browser-scan/scanner": "^1.6.2",
+    "@browser-scan/ui": "^2.7.4",
     "@chakra-ui/react": "^2.2.3",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",

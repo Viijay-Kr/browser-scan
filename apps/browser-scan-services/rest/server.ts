@@ -38,12 +38,13 @@ export const serveStatic = (basePath: string, assetsPath: string) => {
     }))
     server.get("/static/*", restify.plugins.serveStaticFiles(assetsPath, {
       maxAge: 360000,
-      setHeaders(res) {
-        res.setHeader("Content-Encoding", "deflate, gzip")
-      },
     }))
   } catch (e) {
     throw new Error('Path not accessible')
   }
 }
 export { server }
+
+if (process.env.RUN_SEVER) {
+  startServer();
+}

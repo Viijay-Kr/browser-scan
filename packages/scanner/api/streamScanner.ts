@@ -38,7 +38,7 @@ export const scanFilesInChunks = async ({
 }: {
   params: StreamScannerRequest;
   /** A Callback to process the chunks */
-  stream: (chunk: Partial<ScannerResponse["scanned_result"]>) => void;
+  stream: (chunk: ScannerResponse) => void;
   /** A Callback to indicate the scanning is complete */
   done: (result: ScannerResponse) => void;
   /** Callback triggering an error in processing */
@@ -79,15 +79,15 @@ export const scanFilesInChunks = async ({
             .catch(() => {
               error(
                 "error occured while parsing =>" +
-                  file +
-                  "=> this file will be discarded"
+                file +
+                "=> this file will be discarded"
               );
               resolve(file);
             })
             .then(() => {
-              if (scanned_result[file].length) {
-                stream({ [file]: scanned_result[file] });
-              }
+              stream({
+                scanned_result,
+              });
               resolve(file);
             });
         });

@@ -11,7 +11,7 @@ Browser scan lets you scan your CSS and Javascript against a browser of your cho
     - [Scanner Stream](#scanner-stream)
     - [Scanner File](#scanner-file)
     - GraphQL APIS-TBD
-  - [Browser Scan app](./apps/scanner-app/README.md) (v1.0.9)
+  - [Browser Scan app](./apps/scanner-app/README.md) ([npm](https://www.npmjs.com/package/@browser-scan/scanner-app))
 
 ## Apps
 

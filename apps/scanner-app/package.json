@@ -1,6 +1,6 @@
 {
   "name": "@browser-scan/scanner-app",
-  "version": "1.0.9",
+  "version": "1.1.1",
   "description": "Scanner app is end to end application that runs browser scan in your local system",
   "main": "dist/index.js",
   "bin": "dist/index.js",
@@ -36,5 +36,5 @@
   "bugs": {
     "url": "https://github.com/Viijay-Kr/browser-scan/issues"
   },
-  "homepage": "https://github.com/Viijay-Kr/browser-scan#readme"
+  "homepage": "https://github.com/Viijay-Kr/browser-scan/blob/main/apps/scanner-app"
 }

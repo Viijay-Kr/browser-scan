@@ -1,6 +1,6 @@
 {
   "name": "@browser-scan/scanner-app",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Scanner app is end to end application that runs browser scan in your local system",
   "main": "dist/index.js",
   "bin": "dist/index.js",

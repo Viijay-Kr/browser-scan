@@ -10,7 +10,7 @@ The Scanned result is displayed in a tabular view in a per line per file basis a
 ## Installation
 
 - With NPX
-  `npx @browser-scan/scanner-app`
+  `npx @browser-scan/scanner-app@latest`
 
 ## Server
 

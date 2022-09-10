@@ -3,7 +3,9 @@
 Scanner app is a end to end application under browser-scan apps.
 It runs a node server ,serving react powered UI.
 
-Use it to run as a stand alone server for scanning CSS content in you local project
+Use it to run as a stand alone server for scanning CSS content in you local project and check their compatibility against a browser of your choice.
+
+The Scanned result is displayed in a tabular view in a per line per file basis and the non compatible properties
 
 ## Installation
 

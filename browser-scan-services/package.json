@@ -1,0 +1,45 @@
+{
+  "name": "@browser-scan/browser-scan-services",
+  "version": "1.0.7",
+  "description": "Browser scan services is a collection of services such as Rest API services, GraphQL services, CLI services",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rest:dev": "tsc --project tsconfig.json && RUN_SEVER=true node dist/rest/server.js",
+    "build:rest": "tsc --project tsconfig.json",
+    "build": "npm run build:rest",
+    "release": "npm run build && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viijay-Kr/browser-scan.git"
+  },
+  "keywords": [
+    "browser-scan-cli",
+    "browser-scan-rest-services",
+    "browser-scan-graphql"
+  ],
+  "author": "Vijayakrishna",
+  "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
+  "bugs": {
+    "url": "https://github.com/Viijay-Kr/browser-scan/issues"
+  },
+  "homepage": "https://github.com/Viijay-Kr/browser-scan#readme",
+  "dependencies": {
+    "@browser-scan/scanner": "^1.6.3",
+    "@browser-scan/schema": "1.8.0",
+    "restify": "^8.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@types/restify": "^8.5.4",
+    "typescript": "^4.7.4"
+  }
+}
